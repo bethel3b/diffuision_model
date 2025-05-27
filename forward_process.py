@@ -43,11 +43,6 @@ class ForwardProcess:
 
     return x
   
-# get original image
-img_path = "cat.jpg"
-im = Image.open(img_path)
-
-
 
 def fp_all_step():
     image = torch.from_numpy(im_arr)
@@ -85,6 +80,9 @@ def fp_direct_sampling():
     plt.axis('off')
     plt.show()
 
+# get original image
+img_path = "cat.jpg"
+im = Image.open(img_path)
 
 # convert to numpy array and normalize to [0, 1]
 im_arr = np.array(im) / 225.0
